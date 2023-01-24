@@ -1,0 +1,84 @@
+{/* REPOSITORY CARDS SECTION */}
+
+.card_sections {
+    max-width: var(--RepoCardMaxWitdh);
+    padding: 2%;
+    width: 100%;
+
+    background-color: var(--otherBackgroundColor);
+    border-color: var(--contentBorderColor);
+    border-width: var(--borderWitdh);
+    border-radius: var(--secondaryBorderRadius);
+    border-style: solid;
+
+    box-shadow: var(--otherBackgroundColor);
+    cursor: pointer;
+
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.card_sections_hr{
+    border: none;
+    height: 2px;
+    background-color: var(--terziaryColor);
+    color: var(--terziaryColor);
+}
+
+.card_sections:hover{
+    opacity: 60%;
+    border-color: var(--primaryColor);
+    border-width: var(--borderWitdh);
+    border-radius: var(--secondaryBorderRadius);
+}
+
+.hover_arrow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondaryColor);
+    font-size: 85px;
+}
+
+.icon_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icon_div span{
+    padding: 5px 5px;
+    display: flex;
+    justify-content: center;
+    width: var(--maxLogosWitdh);
+    height: var(--maxLogosWitdh);
+}
+
+.card_sections_image{
+    box-sizing: content-box;
+    max-width: 100%;
+    border-radius: var(--secondaryBorderRadius);
+}
+
+/*
+OLD
+.hover_arrow circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+    height: 100px;
+    width: 100px;
+
+    fill: none;
+
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    border-width: 6px;
+}
+
+ */

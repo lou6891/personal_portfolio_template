@@ -1,0 +1,236 @@
+
+:root{
+  --headerWitdh : 26%;
+
+  --mainBorderRadius : 30px;
+  --secondaryBorderRadius : 15px;
+
+  --borderWitdh : 1px;
+
+  --maxLogosWitdh : 55px;
+  --maxLanguageImageWidth : 35px;
+
+  --bodyHeaderLenght : 54%;
+
+}
+[theme = "dark"]{
+  --appBackgroundColor : #111111;
+  --contentBackgroundColor : #1E1E1F;
+  --innerBackgroundColor: #373738;
+  --otherBackgroundColor : #282829;
+
+  --contentBorderColor : #414040;
+
+  --primaryColor : #fdd66d;
+  --secondaryColor : #ffffff;
+  --terziaryColor : #d5d5d5;
+
+}
+
+[theme = "light"]{
+
+  --appBackgroundColor : #DDDDDD;
+  --contentBackgroundColor : #eeeeee;
+  --innerBackgroundColor: #cdcdcd;
+  --otherBackgroundColor : #cdcdcd;
+
+  --contentBorderColor : #292929;
+
+  --primaryColor : #658864;
+  --secondaryColor : #525252;
+  --terziaryColor : #7b7b7b;
+
+}
+
+[devicetype = "Desktop"]{
+  /* Loading animation variables */
+  --dotSizes : 70px;
+  --dotExpansion : 225px;
+
+  /* app  variables */
+  --mainWrapperMargins : 3% 8% 0 8%;
+
+  /* Portfolio section variables */
+  --portoflioGridLayour : 50% 50%;
+  --RepoCardMaxWitdh : 800px;
+
+  /* About section variables */
+  --langugeGridTemplateColumn : 15% 85%;
+  --itSkillsGridTempleteColumn : auto auto auto;
+
+  /* Header section variables */
+  --headerImgShadow : 0  0  0 30px var(--innerBackgroundColor);
+  --headerImgMargin : 20px 0;
+
+  /* Icons*/
+  --maxLogosWitdh : 35px;
+  --HeaderIconsMargin : 7%;
+
+  /* General Variables */
+  --h1FontSize : 50px;
+  --h2FontSize : 30px;
+  --h3FontSize : 26px;
+  --h4FontSize : 24px;
+  --h5FontSize : 22px;
+  --h6FontSize : 20px;
+  --h7FontSize : 18px;
+  --pFontSize : 20px;
+  --buttonFontSize : 19px;
+}
+
+[devicetype = "Tablet"]{
+  /* Loading animation variables */
+  --dotSizes : 30px;
+  --dotExpansion : 100px;
+
+  /* app  variables */
+  --mainWrapperMargins : 5% 7%;
+
+  /* Portfolio section variables */
+  --portoflioGridLayour : 100%;
+  --RepoCardMaxWitdh : 800px;
+
+  /* About section variables */
+  --langugeGridTemplateColumn : 17% 83%;
+  --itSkillsGridTempleteColumn : auto auto auto;
+
+  /* Header section variables */
+  --headerImgShadow : 0  0  0 15px var(--innerBackgroundColor);
+  --headerImgMargin : 20px 15px 20px 20px;
+
+  /* Icons*/
+  --maxLogosWitdh : 40px;
+  --HeaderIconsMargin : 10px;
+
+  /* General Variables */
+  --h1FontSize : 45px;
+  --h2FontSize : 28px;
+  --h3FontSize : 26px;
+  --h4FontSize : 24px;
+  --h5FontSize : 22px;
+  --h6FontSize : 20px;
+  --h7FontSize : 18px;
+  --pFontSize : 20px;
+  --buttonFontSize : 19px;
+
+}
+
+[devicetype = "Mobile"]{
+  /* Loading animation variables */
+  --dotSizes : 30px;
+  --dotExpansion : 100px;
+
+  /* app  variables */
+  --mainWrapperMargins : 4% 5%;
+
+  /* Portfolio section variables */
+  --portoflioGridLayour : 100%;
+  --RepoCardMaxWitdh : 800px;
+
+  /* About section variables */
+  --langugeGridTemplateColumn : 30% 70% ;
+  --itSkillsGridTempleteColumn : auto auto;
+
+  /* Header section variables */
+  --headerImgShadow : 0  0  0 15px var(--innerBackgroundColor);
+  --headerImgMargin : 20px 15px 20px 20px;
+
+  /* Icons*/
+  --maxLogosWitdh : 30px;
+  --HeaderIconsMargin : 5px;
+
+  /* General Variables */
+  --h1FontSize : 35px;
+  --h2FontSize : 24px;
+  --h3FontSize : 22px;
+  --h4FontSize : 20px;
+  --h5FontSize : 18px;
+  --h6FontSize : 16px;
+  --h7FontSize : 14px;
+  --pFontSize : 16px;
+  --buttonFontSize : 19px;
+
+
+}
+
+
+
+.App {
+  text-align: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
+  background-color: var(--appBackgroundColor);
+  overflow-y: auto;
+}
+
+.App main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.main_wrapper_desktop{
+  margin: var(--mainWrapperMargins);
+  display: grid;
+  grid-template-columns: var(--headerWitdh) calc(100% - var(--headerWitdh));
+  grid-gap: 2rem;
+}
+
+.main_wrapper_mobile{
+  margin: var(--mainWrapperMargins);
+}
+
+h1{
+  font-size: var(--h1FontSize);
+  color : var(--primaryColor);
+  cursor: default;
+}
+
+h2{
+  font-size: var(--h2FontSize);
+  color: var(--secondaryColor);
+  cursor: default;
+}
+
+h3{
+  font-size: var(--h3FontSize);
+  color: var(--secondaryColor);
+  cursor: default;
+}
+
+h4{
+  font-size: var(--h4FontSize);
+  color: var(--secondaryColor);
+  font-weight: normal;
+  cursor: default;
+}
+
+h5{
+  font-size: var(--h5FontSize);
+  color: var(--secondaryColor);
+  font-weight: normal;
+  cursor: default;
+}
+
+h6{
+  font-size: var(--h6FontSize);
+  color: var(--secondaryColor);
+  font-weight: normal;
+  cursor: default;
+}
+
+
+p{
+  font-size: var(--pFontSize);
+  color: var(--secondaryColor);
+  cursor: default;
+}
+
+button{
+  font-size: var(--buttonFontSize);
+}
+
+

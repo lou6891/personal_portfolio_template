@@ -1,0 +1,23 @@
+
+
+.theme_toggle_section{
+    align-items: flex-end;
+}
+
+.theme_toggle_section div{
+    position: fixed;
+    margin-top: 40px;
+    margin-right: 60px;
+    right: 0;
+}
+
+.theme_button_img{
+    width: calc(var(--maxLogosWitdh) + 5px);
+    padding : 5px;
+    color: var(--secondaryColor);
+    cursor: pointer;
+}
+
+.theme_button_img:hover{
+    color: var(--primaryColor);
+}
