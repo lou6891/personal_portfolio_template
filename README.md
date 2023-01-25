@@ -1,4 +1,3 @@
----
 # Personal vCard and GitHub Portfolio template
 
 This is a free to use template for a personal website where you can display your cv and skill.
