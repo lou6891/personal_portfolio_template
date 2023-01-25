@@ -13,9 +13,9 @@ This website has been made for any screen, Desktop, Tablet or Mobile!
 
 ## Table of Contents
 
-- [Technology Used](#Technology Used)
-- [How to personalize it](#How to personalize it)
-- [How to Deploy on GitHub pages](#How to Deploy on GitHub pages)
+- [Technology Used](#Technology-Used)
+- [How to personalize it](#How-to-personalize-it)
+- [How to Deploy on GitHub pages](#How-to-Deploy-on-GitHub-pages)
 - [Credits](#Credits)
 - [License](#License)
 
