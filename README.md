@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+---
+# Personal vCard and GitHub Portfolio template
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a free to use template for a personal website where you can display your cv and skill.
+It's divided in two sections: 
+* *About Me* : Page presenting yourself, displaying education, professional experiences, IT and language skills
+* *Portfolio* : Page that shows your GitHub repositories
 
-## Available Scripts
+The objective of this template is to be as **modular and automated** as possible, with some **simple changes** to specific files
+you will be able to customize it. All the GitHub data is pulled directly through APIs calls, once you set up a directory in GitHub it will be automatically 
+added to the website (depending on the setting you chose).
 
-In the project directory, you can run:
+This website has been made for any screen, Desktop, Tablet or Mobile!
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Technology Used](#Technology Used)
+- [How to personalize it](#How to personalize it)
+- [How to Deploy on GitHub pages](#How to Deploy on GitHub pages)
+- [Credits](#Credits)
+- [License](#License)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology Used
+This website was created in React, you will need to install it to run the project
+(for non technical to run it locally and have a preview the command is npm start, cd in the project's folder)
 
-### `npm run build`
+### Dependencies Installed:
+- crypto-js
+- gh-pages
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+--- 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to personalize it
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+###  1. Setting up GitHub
 
-### `npm run eject`
+To set up your GitHub information go to src\parameters\data.
+Here you can find all the personal data you may want to add.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+>To connect to your GitHub add your username to GitHub_name field
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The data retrieved by the APIs are:
+1. GitHub picture
+2. Repository data (for each ):
+    - Name
+    - Description
+    - Created date
+    - Size
+    - Languages
+    - Social Media Preview
+      
+(To modify the information displayed by the site, directly modify these fields on GitHUb)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+###  2. Setting up Personal Information
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In the same file of the GitHUb name (src\parameters\data), the other fields control
+the data of the About Me section, clearer instructions are in the file.
 
-## Learn More
+> If you do not want to include a section, substitute the content with null.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Adding a new IT Skill Img
+To add a new IT skill img, apart from the one in the current list go to /src/parameters/languageSymbols.js
+There you find an dictionary, where the **key = name of the skill** and the **value = img**.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> That dictionary is also used to show the languages used by your GitHUb repository, when adding a new skill that you also used in a repo
+> use the same name that GitHub assign to it
 
-### Code Splitting
+The images are taken from https://devicon.dev/, remember to add the style, key and alt as explained in the file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+###  3. Website settings
 
-### Analyzing the Bundle Size
+In the file settings (src\parameters\settings) are present some specific setting that control some parts of the website.
+They are:
+- Modify the pixel width that manage the transaction between Desktop, Tablet and Mobile lesions of the website
+- Modify the number of repositories to show, and sort them by a specific criteria
+  **Important** : The API will get all your repositories, sort them and then keep only the number you want,
+  for more granular setting you will have to create your own algorithm in the src/components/body/Body.js file or 
+  in the /src/components/body/sorting_functions.js file
+- Modify the landing page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+###  4. Modify theme colors and other CSS variables
 
-### Making a Progressive Web App
+To modify the graphics of the website and the CSS variables that mange it, go to
+/src/App.css. 
+There you can modify:
+- the colors used by the light and dark theme
+- font sizes
+- Other graphics settings
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 5. Modify the website icon, name and description
 
-### Advanced Configuration
+To modify the name, icon and description of the website to the public folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To modify the icon, change the standard react files with your icon file.
+Be carefully, the new icon must have the same name and dimensions of the old ones.
+EX: if you want to change logo192.img, you have to make a logo 192x192 px called logo192.img.
 
-### Deployment
+To modify the website name, description go to the /public/index.html:
+- In line 10 you may add your personalized description
+- In line 27 you may add your personalized name
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## How to Deploy on GitHub pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone this repo
+2. Modify it
+3. Create a repository called `YOUR_GITHUB_NAME.github.io`
+4. Modify the HOMEPAGE field in package.json (line 2)
+5. git init on this project
+6. Add, commit the file/changes
+7. npm run deploy (it may take a few seconds to apply changes)
+
+Full documentation on [Deployment on github pages](https://create-react-app.dev/docs/deployment/#github-pages)
+
+---
+
+## Credits
+The general design and colors of this website were inspired by the vCard portfolio made by
+[codewithsadee](https://github.com/codewithsadee).
+
+This website was made by [lou6891](https://github.com/lou6891)
+
+---
+
+## License
+Use this template as you like.
+However, if you do not modify the structure or graphics we kindly as you to keep the credits
+since hours of work went into it.
+

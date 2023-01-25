@@ -1,10 +1,13 @@
 import "../App.css"
 import React from "react";
-//const max = "var(--maxLanguageImageWidth)"
 const max = "100%"
 const margin = "0 0"
 
-//https://devicon.dev/
+// all icons taken from this website : https://devicon.dev/
+// when adding a new one add:
+// style={{maxHeight : max, maxWidth : max, margin: margin}}
+// alt={"name of the skill}
+// key={name of the skill}
 
 export const languageSymbols = {
     "JavaScript" :  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"

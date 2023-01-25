@@ -1,123 +1,113 @@
 
 export const personal_data = {
-
-    User_Name_Surname : "Luca Conti",
-    GitHub_name : "lou6891",
-    Linkedin_url : "https://www.linkedin.com/in/lucaconti1999/",
-    Website_url : "https://www.deda.app/",
+    // The name displayed by the website
+    User_Name_Surname : "Name Surname",
+    // Mandatory or the site won't work
+    // ex: lou6891
+    GitHub_name : "Github_name",
+    // Not mandatory, if you'd like to add it put the url including https//
+    Linkedin_url : "Linkedin_url",
+    // Not mandatory, if you'd like to add it put the url including https//
+    Website_url : "Website url",
 
     About_Page : {
+        // Not mandatory if you don't want it write : null
         Professional_summary :
-            "I am a highly skilled and motivated computer science professional with a passion for delivering measurable results through \n" +
-            "the application of my coding and problem-solving skills. With a background in both business and computer science, I am able \n" +
-            "to approach challenges from a well-rounded perspective and find creative solutions to complex problems. In my past \n" +
-            "experiences, I have demonstrated my skills to drive digital transformation, by implementing a digital system for purchase \n" +
-            "requests and building a website using NodeJS and ReactJS. I am always seeking to take on new challenges.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus accumsan tristique. " +
+            "Vestibulum convallis lectus volutpat pellentesque suscipit. Vestibulum consectetur enim sit amet porttitor tincidunt. " +
+            "Aenean urna orci, mollis sed leo eget, ornare placerat magna. Etiam ullamcorper varius magna in commodo. "
+        ,
 
+        // Not mandatory if you don't want it write : null
+        // if you would like to add education, it's an array add as many as you would like
+        // these are not sorted, the first one is the first one added, chose the order
         Education :[
             {
-                school_name : "IE School of Science and Technology",
+                school_name : "name",
                 date_start : "September 2022",
                 date_end : "July 2023",
-                program : "Master in Computer Science and Business Technology",
+                program : "program name",
+                // array of countries, you can add one or multiple
                 locations : [
                     "Madrid, ES",
                 ],
+                // Array of stuff did, you can add one or multiple
                 information : [
-                    "Used Python for machine learning and data analytics",
-                    "Knowledge about cloud systems, infrastructure and development",
+                    "Learned things",
+                    "Met people",
                 ],
 
             },
 
             {
-                school_name : "IE Business School",
-                date_start : "January 2022",
+                school_name : "name",
+                date_start : "September 2022",
                 date_end : "July 2023",
-                program : "Master in Management",
+                program : "program name",
+                // array of countries, you can add one or multiple
                 locations : [
                     "Madrid, ES",
                 ],
+                // Array of stuff did, you can add one or multiple
                 information : [
-                    "Dean's list award",
-                    "Awarded membership into Beta Gamma Sigma",
-                    "Graduated with 3.8 GPA",
-                ],
-
-            },
-
-            {
-                school_name : "ESCP European Business School",
-                date_start : "September 2022",
-                date_end : "July 2023",
-                program : "Bachelor in Management",
-                locations : [
-                    "London, UK",
-                    "Turin, IT",
-                    "Berlin, DE"
-                ],
-                information : [
-                    "Dean's list award for two consecutive years",
-                    "Graduated with High Honors and 3.8 GPA",
+                    "Learned things",
+                    "Met people",
                 ],
 
             },
 
         ],
 
+        // Not mandatory if you don't want it write : null
+        // if you would like to add professional experience, it's an array add as many as you would like
+        // these are not sorted, the first one is the first one added, chose the order
         Professional_experiences :[
             {
-                company_name : "Centro Style S.P.A",
-                company_information  : "Family company that serve the need of optical show in more than 80 countries since 40 years",
+                company_name : "name",
+                company_information  : "company information",
                 date_start : "September 2022",
                 date_end : "July 2023",
+                // array of countries, you can add one or multiple
                 locations : [
-                    "Varese, IT"
+                    "Milan, IT"
                 ],
-                position_name : "monitoring and Controlling",
+                position_name : "position",
+                // Array of stuff did, you can add one or multiple
                 position_information : [
-                    "Developed a model for the order workflow for goods not for resale. " +
-                    "Automated and streamlined the process from a paper one to a excel model, using the SQL language and structured a plan for the further implementation of the process in BI",
-                    "Participated in the editing and analysis of business units P&L, forecasting P&L and budget, with the Financial team we \n" +
-                    "created a model for the forecast of the P&L, including sales and costs budgets of different business Units",
-                    "Curated the monthly reporting of key financial and commercial indicators to the department managers",
+                    "Did things" +
+                    "Had a coffee break",
+                    "Did another thing",
                 ],
 
             },
 
         ],
+
+        // array of programming languages, write them as they are spelled in the file : languageSymbols.js
+        // the current options are:
+        // "JavaScript" "Dockerfile" "HTML" "CSS" "C#" "Python" "ReactJs" "NodeJs" "Google Cloud" "AWS" "Oracle Cloud"
+        // SPELL IT CORRECTLY
+        // To add one, just write the name (it must be the same name that github gives to that language, with the same spelling including capital letter
+        // you may find the icon in th website https://devicon.dev/
+        // once you copy the img file, add as properties these (modified correctly):
+        // style={{maxHeight : max, maxWidth : max, margin: margin}}
+        // key={"Name_of_the_language"}
+        // alt={"Name_of_the_language"}
 
         IT_skills : [
             "NodeJs",
             "ReactJs",
-            "Python",
-            "Dockerfile",
-            "CSS",
-            "C#",
-            "HTML",
-            "AWS",
-            "Google Cloud",
         ],
 
-        // Write all the languges in english, key = Language name, value = level of the language
+        // Write all the languages in english, key = Language name, value = level of the language
         Languages : [
-            // Language name  : level from 0 to 5, 0 being never spoken, 5 being native
-            ["Italian" , 5, "Native"],
-            ["English" , 4, "FLuent"],
-            ["Spanish" , 2, "Limited Working proficiency"],
+            // Language name  : level from 0 to 5, 0 being never spoken, 5 being native : Level
+            // the name and level can be whatever you would like,
+            // the only mandatory thing is the number, it controls the length of the line graph
+            ["English" , 5, "Native"],
+            ["Chinese" , 4, "Fluent"],
+            ["German" , 2, "Limited Working proficiency"],
         ],
-
-        /*
-         Extracurricular_activities : [
-            {
-                activity_name : "",
-                date_start : "September 2022",
-                date_end : "July 2023",
-                activity_information : "",
-            }
-        ]
-         */
-
 
     },
 }
