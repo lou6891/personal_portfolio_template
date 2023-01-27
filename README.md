@@ -11,6 +11,10 @@ added to the website (depending on the setting you chose).
 
 This website has been made for any screen, Desktop, Tablet or Mobile!
 
+>**If you find this Template useful please leave a star to the [original repository](https://github.com/lou6891/personal_portfolio_template)!**
+
+Example is action = [Luca's vCard](https://www.lucaconti.io)!
+
 ## Table of Contents
 
 - [Technology Used](#Technology-Used)
@@ -127,9 +131,9 @@ Guide I used, and from which I took these steps [Add a Custom Domain Guide](http
    - 185.199.109.153
    - 185.199.110.153
    - 185.199.111.153
-3. In the DNS management add  CNAME type, name = www, value = YOUR.GIHUB.IO
-4. In the repository to go setting/pages, scroll to ccustom domain, write the domain there
-5. In the \public folder add a file caled CNAME containing a single line with your domain in it
+3. In the DNS management add  CNAME type, name = www, value = YOUR.GITHUB.IO
+4. In the repository to go setting/pages, scroll to custom domain, write the domain there
+5. In the \public folder add a file called CNAME containing a single line with your domain in it
 
 ---
 
