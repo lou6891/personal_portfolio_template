@@ -37,7 +37,9 @@ This website was created in React, you will need to install it to run the projec
 --- 
 
 ## How to use it
-To start using it, you must run npm install to install all the dependencies.
+### 0. Install React and the project's dependencies
+To start using it, you must install [React](https://reactjs.org/) on your machine, then run npm install in the project's folder to install
+the dependencies it uses to run
 
 ###  1. Setting up GitHub
 
