@@ -19,6 +19,7 @@
 }
 
 .card_sections_hr{
+    margin: 3px 0;
     border: none;
     height: 2px;
     background-color: var(--terziaryColor);

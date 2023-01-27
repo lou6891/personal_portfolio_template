@@ -14,7 +14,7 @@ This website has been made for any screen, Desktop, Tablet or Mobile!
 ## Table of Contents
 
 - [Technology Used](#Technology-Used)
-- [How to personalize it](#How-to-personalize-it)
+- [How to use it](#How-to-use-it)
 - [How to Deploy on GitHub pages](#How-to-Deploy-on-GitHub-pages)
 - [Credits](#Credits)
 - [License](#License)
@@ -24,7 +24,7 @@ This website has been made for any screen, Desktop, Tablet or Mobile!
 
 ## Technology Used
 This website was created in React, you will need to install it to run the project
-(for non technical to run it locally and have a preview the command is npm start, cd in the project's folder)
+(for non-technical to run it locally and have a preview the command is npm start, cd in the project's folder)
 
 ### Dependencies Installed:
 - crypto-js
@@ -32,7 +32,8 @@ This website was created in React, you will need to install it to run the projec
 
 --- 
 
-## How to personalize it
+## How to use it
+To start using it, you must run npm install to install all the dependencies.
 
 ###  1. Setting up GitHub
 
@@ -62,7 +63,7 @@ the data of the About Me section, clearer instructions are in the file.
 
 #### Adding a new IT Skill Img
 To add a new IT skill img, apart from the one in the current list go to /src/parameters/languageSymbols.js
-There you find an dictionary, where the **key = name of the skill** and the **value = img**.
+There you find a dictionary, where the **key = name of the skill** and the **value = img**.
 
 > That dictionary is also used to show the languages used by your GitHUb repository, when adding a new skill that you also used in a repo
 > use the same name that GitHub assign to it
@@ -74,8 +75,8 @@ The images are taken from https://devicon.dev/, remember to add the style, key a
 In the file settings (src\parameters\settings) are present some specific setting that control some parts of the website.
 They are:
 - Modify the pixel width that manage the transaction between Desktop, Tablet and Mobile lesions of the website
-- Modify the number of repositories to show, and sort them by a specific criteria
-  **Important** : The API will get all your repositories, sort them and then keep only the number you want,
+- Modify the number of repositories to show, and sort them by a specific criteria and chose the repositories not to show repositories
+  **Important** : The API will get all your repositories, remove the unwanted ones ,sort them and then keep only the number you want,
   for more granular setting you will have to create your own algorithm in the src/components/body/Body.js file or 
   in the /src/components/body/sorting_functions.js file
 - Modify the landing page
@@ -100,6 +101,7 @@ EX: if you want to change logo192.img, you have to make a logo 192x192 px called
 To modify the website name, description go to the /public/index.html:
 - In line 10 you may add your personalized description
 - In line 27 you may add your personalized name
+Then go to \public\manifest.json and modify short_name and name there
 
 ---
 
@@ -108,12 +110,26 @@ To modify the website name, description go to the /public/index.html:
 1. Clone this repo
 2. Modify it
 3. Create a repository called `YOUR_GITHUB_NAME.github.io`
-4. Modify the HOMEPAGE field in package.json (line 2)
+4. Modify the HOMEPAGE field in package.json with `https://YOUR_GITHUB_NAME.github.io` (line 2) 
 5. git init on this project
 6. Add, commit the file/changes
-7. npm run deploy (it may take a few seconds to apply changes)
+7. `npm run deploy` (it may take a few seconds to apply changes)
 
 Full documentation on [Deployment on github pages](https://create-react-app.dev/docs/deployment/#github-pages)
+
+### Deploy with custom domain
+
+Guide I used, and from which I took these steps [Add a Custom Domain Guide](https://jinnabalu.medium.com/godaddy-domain-with-github-pages-62aed906d4ef)
+
+1. Buy a domain
+2. In the DNS management add as type A IPs
+   - 185.199.108.153
+   - 185.199.109.153
+   - 185.199.110.153
+   - 185.199.111.153
+3. In the DNS management add  CNAME type, name = www, value = YOUR.GIHUB.IO
+4. In the repository to go setting/pages, scroll to ccustom domain, write the domain there
+5. In the \public folder add a file caled CNAME containing a single line with your domain in it
 
 ---
 

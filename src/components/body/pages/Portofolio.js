@@ -1,4 +1,4 @@
-import Cart_layout from "../../git_cards/Cart_layout";
+import GitRepoCard from "../../git_cards/GitRepoCard";
 import classes from "../Body.module.css";
 import React from "react";
 import {personal_data} from "../../../parameters/data";
@@ -15,7 +15,7 @@ export default function Portfolio({repositoryData, deviceType}){
                     {repositoryData.map((rep, index) => {
 
                         return (
-                            <Cart_layout
+                            <GitRepoCard
                                 rep={rep}
                                 index={index}
                                 key={index}

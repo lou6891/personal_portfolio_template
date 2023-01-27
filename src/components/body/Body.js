@@ -2,7 +2,7 @@ import classes from "./Body.module.css"
 import React from "react";
 import Portfolio from "./pages/Portofolio";
 import About from "./pages/About";
-import Theme_toggle from "../theme_toggler/Theme_toggle";
+import ThemeToggler from "../theme_toggler/ThemeToggler";
 import {personal_data} from "../../parameters/data";
 import sha1 from 'crypto-js/sha1';
 import {sorting_functions} from "./sorting_functions"
@@ -32,8 +32,11 @@ export default function Body({deviceType, theme, setTheme}){
                 const response_repos = await fetch(repos_url)
                 const data_repos = await response_repos.json()
 
+                // filter the repos, remove the ones the user doesn't want to show
+                const filteredData = data_repos.filter((repo) => settings.Portfolio_settings.gitHub_repos_not_to_include.includes(repo["name"]) === false)
+
                 // Sort the data repos to match the sorting selected by the user
-                let sortedData = await sorting_functions(data_repos)
+                let sortedData = await sorting_functions(filteredData)
 
                 // slice the data to match the user parameters
                 if(settings.Portfolio_settings.GitHub_repos_to_show.toString().toLocaleLowerCase() !== "all"){
@@ -93,7 +96,7 @@ export default function Body({deviceType, theme, setTheme}){
                             Portfolio
                         </li>
 
-                        <Theme_toggle theme={theme} setTheme={setTheme}/>
+                        <ThemeToggler theme={theme} setTheme={setTheme}/>
 
                     </ul>
 

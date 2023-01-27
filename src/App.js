@@ -5,7 +5,6 @@ import './App.css';
 import Loader from "./components/loader/Loader";
 import {personal_data} from "./parameters/data"
 import {settings} from "./parameters/settings"
-import Footer from "./components/footer/Footer";
 const loadingAnimationTime = 1800
 
 function App() {

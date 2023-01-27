@@ -14,6 +14,12 @@ export const settings = {
 
 
     Portfolio_settings : {
+        // list of names of repos not to be included in the portfolio page,
+        // thee will be excluded before calculating how many repository to show
+        // Be careful with the spelling!
+        gitHub_repos_not_to_include : [
+            "Example-1"
+        ],
         // number of repository from GitHub to show
         // options, number from 0 to the total number or "all"
         GitHub_repos_to_show : "all",

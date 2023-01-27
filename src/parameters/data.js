@@ -4,7 +4,7 @@ export const personal_data = {
     User_Name_Surname : "Name Surname",
     // Mandatory or the site won't work
     // ex: lou6891
-    GitHub_name : "Github_name",
+    GitHub_name : "lou6891",
     // Not mandatory, if you'd like to add it put the url including https//
     Linkedin_url : "Linkedin_url",
     // Not mandatory, if you'd like to add it put the url including https//

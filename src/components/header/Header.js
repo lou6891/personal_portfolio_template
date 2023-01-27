@@ -20,11 +20,21 @@ export default function Header({userData,deviceType}){
         }
     }
 
+    const Credits = ()=>{
+        return(
+            <a className={classes.credits}
+               href={"https://github.com/lou6891/personal_portfolio_template"} >
+                This website was made by Luca Conti
+            </a>
+
+        )
+    }
+
 
     const SocialIcons = ()=>{
         return(
             <span
-                style={{display : "flex", width : "100%", justifyContent : deviceType === "Desktop" ? "space-evenly" : "space-between"}}>
+                style={{display : "flex", width : "100%", justifyContent : deviceType === "Desktop" ? "space-evenly" : "space-around"}}>
                     {personal_data.GitHub_name
                         ?
                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -76,17 +86,21 @@ export default function Header({userData,deviceType}){
                     style={{ display : deviceType === "Desktop" ? "" : "flex"}}
                 >
 
-                    <img src={userData["avatar_url"]}
-                         alt={"GitHub profile"}
-                         style={{ maxWidth : deviceType === "Desktop" ? "90%" : "30%"}}
-                         className={classes.header_profile_img }
-                    />
+                            <img src={userData["avatar_url"]}
+                                 alt={"GitHub profile"}
+                                 style={{maxWidth :deviceType === "Desktop" ? "90%" : "30%" }}
+                                 className={classes.header_profile_img }
+                            />
+
+
 
                     {
                         deviceType === "Desktop"
                             ?
 
-                            <h1 className={ classes.header_title_desktop }>
+                            <h1 className={ classes.header_title_desktop }
+                                style={{width : "100%"}}
+                            >
                                 {personal_data.User_Name_Surname}
                             </h1>
                             :
@@ -113,6 +127,7 @@ export default function Header({userData,deviceType}){
 
 
                                 <SocialIcons/>
+
                             </div>
                     }
 
@@ -143,12 +158,13 @@ export default function Header({userData,deviceType}){
                             </h5>
                             <hr/>
                             <SocialIcons/>
+
                         </div>
                         :
                         ""
                 }
 
-
+                <Credits/>
             </section>
 
         </header>

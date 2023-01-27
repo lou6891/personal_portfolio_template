@@ -1,6 +1,6 @@
 import classes from "./Theme_toggle.module.css"
 
-export default function Theme_toggle({theme, setTheme}){
+export default function ThemeToggler({theme, setTheme}){
 
     const MoonIcon = ()=>{
         return(
