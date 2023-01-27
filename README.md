@@ -13,7 +13,7 @@ This website has been made for any screen, Desktop, Tablet or Mobile!
 
 >**If you find this Template useful please leave a star to the [original repository](https://github.com/lou6891/personal_portfolio_template)!**
 
-Example is action = [Luca's vCard](https://www.lucaconti.io)!
+Example in action = [Luca's vCard](https://www.lucaconti.io)!
 
 ## Table of Contents
 
