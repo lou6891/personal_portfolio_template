@@ -24,7 +24,7 @@ export default function Header({userData,deviceType}){
         return(
             <a className={classes.credits}
                href={"https://github.com/lou6891/personal_portfolio_template"} >
-                This website was made by Luca Conti
+                Website template made by Luca Conti
             </a>
 
         )
