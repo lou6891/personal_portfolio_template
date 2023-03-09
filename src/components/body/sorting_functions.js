@@ -29,3 +29,26 @@ export function sorting_functions(dataToSort){
     }
     catch (e) { console.log(e) }
 }
+
+
+export function rearrange_repo_order(dataToRearrange){
+    try
+    {
+        const copyOfTheData = [...dataToRearrange]
+        const reposToMove = []
+
+        for (let repoToRearrange of settings.Portfolio_settings.gitHub_to_rearrange) {
+            // eslint-disable-next-line array-callback-return
+            copyOfTheData.map((repo, index) => {
+                if(repo["name"] === repoToRearrange ){
+                    let test = copyOfTheData.splice(index, 1)
+                    reposToMove.push(...test)
+                }
+            })
+        }
+
+        return reposToMove.concat(copyOfTheData)
+
+    }
+    catch (e) { console.log(e) }
+}

@@ -5,7 +5,7 @@ import About from "./pages/About";
 import ThemeToggler from "../theme_toggler/ThemeToggler";
 import {personal_data} from "../../parameters/data";
 import sha1 from 'crypto-js/sha1';
-import {sorting_functions} from "./sorting_functions"
+import {sorting_functions, rearrange_repo_order} from "./sorting_functions"
 import {settings} from "../../parameters/settings";
 export default function Body({deviceType, theme, setTheme}){
 
@@ -36,18 +36,21 @@ export default function Body({deviceType, theme, setTheme}){
                 const filteredData = data_repos.filter((repo) => settings.Portfolio_settings.gitHub_repos_not_to_include.includes(repo["name"]) === false)
 
                 // Sort the data repos to match the sorting selected by the user
-                let sortedData = await sorting_functions(filteredData)
+                const sortedData = await sorting_functions(filteredData)
+
+                /// Sort data to show first the repos selected by the user
+                let rearrangedData = rearrange_repo_order(sortedData)
 
                 // slice the data to match the user parameters
                 if(settings.Portfolio_settings.GitHub_repos_to_show.toString().toLocaleLowerCase() !== "all"){
-                    sortedData = sortedData.slice(0, settings.Portfolio_settings.GitHub_repos_to_show)
+                    rearrangedData = rearrangedData.slice(0, settings.Portfolio_settings.GitHub_repos_to_show)
                 }
 
                 // Add the public image of the repository and call for the languages used in the repo
                 // to do so before we need to generate a hash (will be based on current data to make it unique)
                 const date = new Date()
                 const hash = sha1(date.toString()).toString()
-                await sortedData.map(async (rep) => {
+                rearrangedData.map(async (rep) => {
                     rep["Social_Preview"] = "https://opengraph.githubassets.com/" + hash + "/" + rep["full_name"]
 
                     const language_url = "https://api.github.com/repos/" + personal_data.GitHub_name + "/" + rep["name"] + "/languages"
@@ -64,7 +67,7 @@ export default function Body({deviceType, theme, setTheme}){
 
                 })
 
-                setRepositoryData([...sortedData])
+                setRepositoryData([...rearrangedData])
             }
             catch (e) { console.log(e) }
         }

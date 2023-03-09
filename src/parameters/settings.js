@@ -20,9 +20,19 @@ export const settings = {
         gitHub_repos_not_to_include : [
             "Example-1"
         ],
+
+        // list of gitRepos to change position from any index in the repos array the beginning of the array,
+        // These repos will be shown first, the order of the array will reflect the order of the rearrangement
+        // ex: original order = Repo1, Repo2, Repo3, Repo4
+        // gitHub_to_rearrange : ["Repo3", "Repo4"]
+        // new order = Repo3, Repo4 , Repo1, Repo2,
+        gitHub_to_rearrange : [],
+
+
         // number of repository from GitHub to show
         // options, number from 0 to the total number or "all"
         GitHub_repos_to_show : "all",
+
         GiHub_repos_sort_by : "Size",
         // Options for the order of displaying the GitHub repositories
         // Created_date_ascending
