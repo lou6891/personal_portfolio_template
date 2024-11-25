@@ -53,6 +53,10 @@ export default function Body({deviceType, theme, setTheme}){
                 rearrangedData.map(async (rep) => {
                     rep["Social_Preview"] = "https://opengraph.githubassets.com/" + hash + "/" + rep["full_name"]
 
+                    // Preload the image
+                    const img = new Image();
+                    img.src = rep["Social_Preview"];
+
                     const language_url = "https://api.github.com/repos/" + personal_data.GitHub_name + "/" + rep["name"] + "/languages"
                     const response_lang =  await fetch(language_url)
                     const language_data = await response_lang.json()
