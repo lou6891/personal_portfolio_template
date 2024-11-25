@@ -55,10 +55,15 @@ export const languageSymbols = {
                           key={"Google Cloud"}
                           alt={"Google Cloud"}
     />,
-    "AWS" : <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+    "AWS" : <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
                  style={{maxHeight : max, maxWidth : max, margin: margin}}
                  key={"AWS"}
                  alt={"AWS"}
+    />,
+    "Azure" : <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+                 style={{maxHeight : max, maxWidth : max, margin: margin}}
+                 key={"Azure"}
+                 alt={"Azure"}
     />,
     "Oracle Cloud" : <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
                           style={{maxHeight : max, maxWidth : max, margin: margin}}
