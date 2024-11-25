@@ -38,7 +38,15 @@ export default function About({theme}){
                         <hr/>
 
                         <h5 style={{textAlign : "left", margin : "0"}}>
-                            {personal_data["About_Page"]["Professional_summary"]}
+                            {personal_data["About_Page"]["Professional_summary"]
+                                .split('\n')
+                                .map((line, index) => (
+                                    <React.Fragment key={index}>
+                                        {line}
+                                        <br />
+                                    </React.Fragment>
+                                ))
+                            }
                         </h5>
 
                     </section>
